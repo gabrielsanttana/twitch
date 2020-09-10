@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text} from 'react-native';
+import Header from '../../components/Header';
 import {Container} from './styles';
 
 const Following: React.FC = () => {
   return (
     <Container>
-      <Text>Following</Text>
+      <Header />
     </Container>
   );
 };
