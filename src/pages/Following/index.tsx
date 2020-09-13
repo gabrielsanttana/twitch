@@ -1,16 +1,10 @@
-import React, {useMemo} from 'react';
+import React, {Component, useMemo} from 'react';
 import Header from '../../components/Header';
 import {Container} from './styles';
 import {View, FlatList} from 'react-native';
 import Heading from '../../components/Heading';
 
-interface Component {
-  key: string;
-  render: () => JSX.Element;
-  isTitle?: boolean;
-}
-
-interface Component {
+interface Item {
   key: string;
   render: () => JSX.Element;
   isTitle?: boolean;
@@ -18,10 +12,10 @@ interface Component {
 
 const Following: React.FC = () => {
   const {components, componentsIndices} = useMemo(() => {
-    const components: Component[] = [
+    const components: Item[] = [
       {
         key: 'FOLLOWING',
-        render: () => <Heading />,
+        render: () => <Heading>Following</Heading>,
         isTitle: true,
       },
       {
@@ -43,12 +37,12 @@ const Following: React.FC = () => {
         render: () => <View />,
       },
       {
-        key: 'FOLLOWING',
+        key: 'LIVE_CHANNELS',
         render: () => <View />,
         isTitle: true,
       },
       {
-        key: 'FOLLOWING_LIST',
+        key: 'LIVE_CHANNELS_LIST',
         render: () => <View />,
       },
       {
@@ -78,7 +72,7 @@ const Following: React.FC = () => {
     <Container>
       <Header />
 
-      <FlatList
+      <FlatList<Item>
         data={components}
         renderItem={({item}) => item.render()}
         keyExtractor={({key}) => key}

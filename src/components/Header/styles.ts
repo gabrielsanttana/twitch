@@ -5,7 +5,7 @@ export const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 14px;
+  padding: 14px 0;
 `;
 
 export const Avatar = styled.View`
