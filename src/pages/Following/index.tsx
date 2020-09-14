@@ -5,6 +5,7 @@ import {View, FlatList} from 'react-native';
 import Heading from '../../components/Heading';
 import Title from '../../components/Title';
 import FollowedCategoriesList from '../../components/FollowedCategoriesList';
+import LiveChannelsList from '../../components/LiveChannelsList';
 
 interface Component {
   key: string;
@@ -30,21 +31,21 @@ const Following: React.FC = () => {
         render: () => <FollowedCategoriesList />,
       },
       {
-        key: 'CONTINUE_WATCHING',
-        render: () => <Title>Continue watching</Title>,
-        isTitle: true,
-      },
-      {
-        key: 'CONTINUE_WATCHING_LIST',
-        render: () => <View />,
-      },
-      {
         key: 'LIVE_CHANNELS',
         render: () => <Title>Live channels</Title>,
         isTitle: true,
       },
       {
         key: 'LIVE_CHANNELS_LIST',
+        render: () => <LiveChannelsList />,
+      },
+      {
+        key: 'CONTINUE_WATCHING',
+        render: () => <Title>Continue watching</Title>,
+        isTitle: true,
+      },
+      {
+        key: 'CONTINUE_WATCHING_LIST',
         render: () => <View />,
       },
       {

@@ -7,5 +7,5 @@ export const TitleText = styled.Text`
   font-family: roboto_700;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 9px 0;
+  padding: 9px 0;
 `;

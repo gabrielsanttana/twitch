@@ -2,7 +2,11 @@ import React from 'react';
 import {Container, HeadingText} from './styles';
 
 const Heading: React.FC = ({children}) => {
-  return <HeadingText>{children}</HeadingText>;
+  return (
+    <Container>
+      <HeadingText>{children}</HeadingText>
+    </Container>
+  );
 };
 
 export default Heading;

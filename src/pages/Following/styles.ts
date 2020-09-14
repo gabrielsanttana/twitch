@@ -9,5 +9,5 @@ const statusBarHeight =
 export const Container = styled.View`
   flex: 1;
   background-color: ${colors.primary};
-  padding: ${statusBarHeight + 'px'} 20px 0;
+  padding: ${statusBarHeight + 'px'} 14px 0;
 `;
