@@ -15,6 +15,8 @@
   <li><a href="https://reactnative.dev/docs/getting-started">React Native</a></li>
   <li><a href="https://styled-components.com/">Styled Components</a></li>
   <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+  <li><a href="https://expo.io">Expo</a></li>
+  
 </ul>
 
 ## ⚙️ Requirements
@@ -23,6 +25,7 @@
   <li><a href="https://git-scm.com/">Git</a></li>
   <li><a href="https://nodejs.org/en/">Node.js</a></li>
   <li><a href="https://yarnpkg.com/">Yarn</a></li>
+  <li><a href="https://expo.io/tools">Expo App</a></li>
 </ul>
 
 ## 🚀 Installation
@@ -34,7 +37,9 @@ $ yarn
 $ yarn start
 ```
 
-The application will pop-up in the browser on http://localhost:3000
+A new window with the application log will open in the browser
+
+Then, you can simply load the app by scanning the QR code with the Expo mobile app or by using the local URL
 
 ## ⚖️ License
 
