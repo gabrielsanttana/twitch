@@ -1,10 +1,12 @@
-import React, {Component, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import Header from '../../components/Header';
 import {Container} from './styles';
 import {View, FlatList} from 'react-native';
 import Heading from '../../components/Heading';
+import Title from '../../components/Title';
+import FollowedCategoriesList from '../../components/FollowedCategoriesList';
 
-interface Item {
+interface Component {
   key: string;
   render: () => JSX.Element;
   isTitle?: boolean;
@@ -12,7 +14,7 @@ interface Item {
 
 const Following: React.FC = () => {
   const {components, componentsIndices} = useMemo(() => {
-    const components: Item[] = [
+    const components: Component[] = [
       {
         key: 'FOLLOWING',
         render: () => <Heading>Following</Heading>,
@@ -20,16 +22,16 @@ const Following: React.FC = () => {
       },
       {
         key: 'FOLLOWED_CATEGORIES',
-        render: () => <View />,
+        render: () => <Title>Followed categories</Title>,
         isTitle: true,
       },
       {
         key: 'FOLLOWED_CATEGORIES_LIST',
-        render: () => <View />,
+        render: () => <FollowedCategoriesList />,
       },
       {
         key: 'CONTINUE_WATCHING',
-        render: () => <View />,
+        render: () => <Title>Continue watching</Title>,
         isTitle: true,
       },
       {
@@ -38,7 +40,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'LIVE_CHANNELS',
-        render: () => <View />,
+        render: () => <Title>Live channels</Title>,
         isTitle: true,
       },
       {
@@ -47,7 +49,7 @@ const Following: React.FC = () => {
       },
       {
         key: 'OFFLINE_CHANNELS',
-        render: () => <View />,
+        render: () => <Title>Offile channels</Title>,
         isTitle: true,
       },
       {
@@ -72,7 +74,7 @@ const Following: React.FC = () => {
     <Container>
       <Header />
 
-      <FlatList<Item>
+      <FlatList<Component>
         data={components}
         renderItem={({item}) => item.render()}
         keyExtractor={({key}) => key}
