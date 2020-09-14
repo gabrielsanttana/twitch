@@ -6,6 +6,7 @@ import Heading from '../../components/Heading';
 import Title from '../../components/Title';
 import FollowedCategoriesList from '../../components/FollowedCategoriesList';
 import LiveChannelsList from '../../components/LiveChannelsList';
+import OfflineChannelsList from '../../components/OfflineChannelsList';
 
 interface Component {
   key: string;
@@ -46,16 +47,16 @@ const Following: React.FC = () => {
       },
       {
         key: 'CONTINUE_WATCHING_LIST',
-        render: () => <View />,
+        render: () => <LiveChannelsList />,
       },
       {
         key: 'OFFLINE_CHANNELS',
-        render: () => <Title>Offile channels</Title>,
+        render: () => <Title>Offline channels</Title>,
         isTitle: true,
       },
       {
         key: 'OFFLINE_CHANNELS_LIST',
-        render: () => <View />,
+        render: () => <OfflineChannelsList />,
       },
     ];
 
