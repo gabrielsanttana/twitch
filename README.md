@@ -1,4 +1,4 @@
-## <div align="center"><img src="./.github/twitch-logo.png" width="70"  /></div>
+## <div align="center"><img src="./.github/twitch-logo.png" width="90"  /></div>
 
 ###
 
